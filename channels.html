@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VibraTube Channels - Your Personal Broadcasting Hub</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+  }
+  .logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff0000, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000; }
+    to { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+  }
+  nav a {
+    color: #00ffff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #ff00ff;
+  }
+  .hero {
+    text-align: center;
+    padding: 100px 0;
+    background: radial-gradient(circle, #000033, #000);
+  }
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  .channel-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+  .feature {
+    background-color: rgba(0, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+  }
+  .feature-icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #00ffff;
+  }
+  .channel-demo {
+    margin-top: 50px;
+    background-color: #111;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+  }
+  .channel-header {
+    background: linear-gradient(45deg, #00ccff, #0033ff);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .channel-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 3px solid #fff;
+  }
+  .channel-info h2 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  .channel-stats {
+    display: flex;
+    margin-top: 10px;
+  }
+  .stat {
+    margin-right: 20px;
+    font-size: 0.9em;
+  }
+  .channel-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  .video-thumbnail {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  .video-thumbnail img {
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+  .video-thumbnail:hover img {
+    transform: scale(1.1);
+  }
+  .video-duration {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 0.8em;
+  }
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-top: 1px solid #333;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">VibraTube</div>
+      <nav>
+        <a href="Homepage.html">Home</a>
+        <a href="feature.html">Features</a>
+        <a href="explore.html">Explore</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+    
+    <section class="hero">
+      <h1>VibraTube Channels</h1>
+      <p>Your Personal Broadcasting Hub</p>
+    </section>
+    
+    <section class="channel-features">
+      <div class="feature">
+        <div class="feature-icon">📺</div>
+        <h2>Personalized Channel</h2>
+        <p>Create your own branded space to showcase your content and connect with your audience.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🎬</div>
+        <h2>Long-Form Content</h2>
+        <p>Upload videos up to 1 hour long, perfect for in-depth tutorials, vlogs, and documentaries.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📊</div>
+        <h2>Analytics Dashboard</h2>
+        <p>Get detailed insights into your channel's performance, audience demographics, and engagement metrics.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💬</div>
+        <h2>Community Tab</h2>
+        <p>Engage with your followers through posts, polls, and updates between video uploads.</p>
+      </div>
+    </section>
+    
+    <section class="channel-demo">
+      <div class="channel-header">
+        <img src="https://vibratube.com/avatar/techguru.jpg" alt="TechGuru Avatar" class="channel-avatar">
+        <div class="channel-info">
+          <h2>TechGuru</h2>
+          <div class="channel-stats">
+            <span class="stat">1.2M Subscribers</span>
+            <span class="stat">150 Videos</span>
+            <span class="stat">50M Views</span>
+          </div>
+        </div>
+      </div>
+      <div class="channel-content">
+        <div class="video-thumbnail">
+          <img src="https://vibratube.com/thumbnail/iphone15-review.jpg" alt="iPhone 15 Review">
+          <span class="video-duration">15:23</span>
+        </div>
+        <div class="video-thumbnail">
+          <img src="https://vibratube.com/thumbnail/best-laptops-2023.jpg" alt="Best Laptops of 2023">
+          <span class="video-duration">22:47</span>
+        </div>
+        <div class="video-thumbnail">
+          <img src="https://vibratube.com/thumbnail/ai-future.jpg" alt="The Future of AI">
+          <span class="video-duration">18:05</span>
+        </div>
+        <div class="video-thumbnail">
+          <img src="https://vibratube.com/thumbnail/smart-home-guide.jpg" alt="Ultimate Smart Home Guide">
+          <span class="video-duration">30:12</span>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      <p>&copy; 2023 VibraTube. All rights reserved.</p>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact us.html">Contact</a>
+      </nav>
+    </footer>
+  </div>
+</body></html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact VibraTube - We're Here to Help</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+  }
+  .logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff0000, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000; }
+    to { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+  }
+  nav a {
+    color: #00ffff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #ff00ff;
+  }
+  h1, h2 {
+    color: #00ffff;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+  .contact-method {
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .contact-method:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+  }
+  .contact-icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #00ffff;
+  }
+  .contact-form {
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 50px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #00ffff;
+  }
+  input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #00ffff;
+    border-radius: 5px;
+    background-color: rgba(0, 255, 255, 0.1);
+    color: #fff;
+  }
+  button {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+  }
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-top: 1px solid #333;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">VibraTube</div>
+      <nav>
+        <a href="Homepage.html">Home</a>
+        <a href="feature.html">Features</a>
+        <a href="https://vibratube.com/explore">Explore</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+    
+    <h1>Contact Us</h1>
+    <p>We're here to help! Choose your preferred method of contact below.</p>
+    
+    <div class="contact-grid">
+      <div class="contact-method">
+        <div class="contact-icon">📧</div>
+        <h2>Email Support</h2>
+        <p>Get in touch with our support team via email.</p>
+        <a href="mailto: kingdinomine@gmail.com">VibraTube@gmail.com<span class="__cf_email__" data-cfemail="f4878184849b8680b4829d96869580819691da979b99">[email&#160;protected]</span></a>
+      </div>
+      <div class="contact-method">
+        <div class="contact-icon">💬</div>
+        <h2>Live Chat</h2>
+        <p>Chat with a support agent in real-time.</p>
+        <a href="#" onclick="alert('Live chat feature coming soon!')">Start Chat</a>
+      </div>
+      <div class="contact-method">
+        <div class="contact-icon">📱</div>
+        <h2>Social Media</h2>
+        <p>Reach out to us on your favorite platform.</p>
+        <a href="https://twitter.com/vibratube">Twitter</a> |
+        <a href="https://facebook.com/vibratube">Facebook</a> |
+        <a href="https://instagram.com/vibratube">Instagram</a>
+      </div>
+    </div>
+    
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="https://vibratube.com/submit-contact" method="POST">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject:</label>
+          <select id="subject" name="subject" required>
+            <option value="">Select a subject</option>
+            <option value="account">Account Issues</option>
+            <option value="technical">Technical Support</option>
+            <option value="feedback">Feedback</option>
+            <option value="partnership">Partnership Inquiries</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    
+    <footer>
+      <p>&copy; 2023 VibraTube. All rights reserved.</p>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+       
+      </nav>
+    </footer>
+  </div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body></html>

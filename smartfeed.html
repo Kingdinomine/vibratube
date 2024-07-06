@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience Smart Feed - VibraTube</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid #333;
+    }
+    .logo {
+      font-size: 2.5em;
+      font-weight: bold;
+      background: linear-gradient(45deg, #ff0000, #ff00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000; }
+      to { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+    }
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff00ff;
+    }
+    h1, h2 {
+      color: #00ffff;
+    }
+    .feature-showcase {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 50px;
+    }
+    .feature-description {
+      flex: 1;
+      padding-right: 50px;
+    }
+    .feature-visual {
+      flex: 1;
+      background: rgba(0, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    }
+    .feed-item {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    .feed-item img {
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      margin-right: 15px;
+    }
+    .feed-content {
+      flex: 1;
+    }
+    .feed-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    .feed-action {
+      color: #00ffff;
+      text-decoration: none;
+      font-size: 0.9em;
+      cursor: pointer;
+    }
+    .cta-button {
+      display: inline-block;
+      background-color: #ff0000;
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+    }
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+      border-top: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">VibraTube</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="create.html">Create</a>
+        <a href="#live">Go Live</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+    
+    <h1>Experience Smart Feed</h1>
+    
+    <div class="feature-showcase">
+      <div class="feature-description">
+        <h2>Your Personalized Content Experience</h2>
+        <p>Welcome to the Smart Feed experience! Here, you'll find content tailored specifically to your interests. Our advanced AI algorithms curate a feed that keeps you engaged and entertained based on your interactions, preferences, and viewing habits.</p>
+        <h3>Features:</h3>
+        <ul>
+          <li>Real-time content updates</li>
+          <li>Seamless integration of photos, videos, and live streams</li>
+          <li>Personalized content recommendations</li>
+          <li>Discover new creators and trends</li>
+          <li>Interactive and user-friendly interface</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div id="smart-feed"></div>
+      </div>
+    </div>
+    
+    <footer>
+      <p>&copy; 2023 VibraTube. All rights reserved.</p>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </footer>
+  </div>
+
+  <script>
+    // Sample data for the smart feed
+    const smartFeedData = [
+      {
+        username: 'TravelEnthusiast',
+        profilePicture: 'user1.jpg',
+        content: "Exploring the hidden gems of Bali! 🌴✨ #TravelDiaries",
+        likes: 0,
+        comments: []
+      },
+      {
+        username: 'MasterChef',
+        profilePicture: 'user2.jpg',
+        content: 'Cooking up some delicious treats! 🍰 #BakingLove',
+        likes: 0,
+        comments: []
+      },
+      {
+        username: 'FitnessFanatic',
+        profilePicture: 'user3.jpg',
+        content: 'Join my live workout session! 💪🔥 #FitnessGoals',
+        likes: 0,
+        comments: []
+      }
+    ];
+
+    // Initialize the smart feed
+    const smartFeed = document.getElementById('smart-feed');
+
+    // Render smart feed data
+    function renderSmartFeed() {
+      smartFeed.innerHTML = '';
+      smartFeedData.forEach(post => {
+        const feedItem = document.createElement('div');
+        feedItem.className = 'feed-item';
+
+        const profileImage = document.createElement('img');
+        profileImage.src = post.profilePicture;
+        profileImage.alt = `Profile picture of ${post.username}`;
+
+        const feedContent = document.createElement('div');
+        feedContent.className = 'feed-content';
+        feedContent.innerHTML = `
+          <strong>@${post.username}</strong>
+          <p>${post.content}</p>
+          <div class="feed-actions">
+            <span class="feed-action" onclick="likeSmartPost('${post.username}')">❤️ ${post.likes}</span>
+            <span class="feed-action" onclick="commentSmartPost('${post.username}')">💬 Comment</span>
+            <span class="feed-action">🔁 Share</span>
+          </div>
+        `;
+
+        feedItem.appendChild(profileImage);
+        feedItem.appendChild(feedContent);
+        smartFeed.appendChild(feedItem);
+      });
+    }
+
+    // Like post function for smart feed
+    function likeSmartPost(username) {
+      const post = smartFeedData.find(p => p.username === username);
+      if (post) {
+        post.likes += 1;
+        renderSmartFeed();
+      }
+    }
+
+    // Comment post function for smart feed (mockup)
+    function commentSmartPost(username) {
+      const comment = prompt('Enter your comment:');
+      if (comment) {
+        const post = smartFeedData.find(p => p.username === username);
+        if (post) {
+          post.comments.push(comment);
+          renderSmartFeed();
+        }
+      }
+    }
+
+    // Initial render of the smart feed
+    renderSmartFeed();
+  </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About VibraTube - The Future of Social Media</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+  }
+  .logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff0000, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000; }
+    to { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+  }
+  nav a {
+    color: #00ffff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #ff00ff;
+  }
+  .about-section {
+    padding: 50px 0;
+  }
+  h1, h2 {
+    color: #00ffff;
+  }
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #00ffff;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  .timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #ff00ff;
+    border: 4px solid #00ffff;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .left {
+    left: 0;
+  }
+  .right {
+    left: 50%;
+  }
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #00ffff;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #00ffff;
+  }
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #00ffff;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #00ffff transparent transparent;
+  }
+  .right::after {
+    left: -16px;
+  }
+  .content {
+    padding: 20px 30px;
+    background-color: rgba(0, 255, 255, 0.1);
+    position: relative;
+    border-radius: 6px;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-in {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+  .team-member {
+    text-align: center;
+  }
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00ffff;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">VibraTube</div>
+      <nav>
+        <a href="Homepage.html">Home</a>
+        <a href="feature.html">Features</a>
+        <a href="https://vibratube.com/explore">Explore</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+    
+    <section class="about-section">
+      <h1>About VibraTube</h1>
+      <p>VibraTube is a revolutionary social platform that seamlessly integrates the best of photo sharing and video streaming. Born from the vision of creating a more vibrant and interactive online community, VibraTube has quickly become the go-to platform for content creators, influencers, and users who crave a visually stunning and engaging experience.</p>
+      
+      <h2>Our Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item left">
+          <div class="content fade-in">
+            <h3>2020</h3>
+            <p>VibraTube was conceived by a group of tech enthusiasts who saw the need for a more integrated social media experience.</p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="content fade-in">
+            <h3>2021</h3>
+            <p>The first beta version of VibraTube was launched, featuring the core functionalities of photo sharing and video uploads.</p>
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="content fade-in">
+            <h3>2022</h3>
+            <p>VibraTube introduced its groundbreaking live streaming feature with interactive animations and virtual gifts.</p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="content fade-in">
+            <h3>2023</h3>
+            <p>With over 100 million active users, VibraTube has become one of the fastest-growing social media platforms in the world.</p>
+          </div>
+        </div>
+      </div>
+      
+      <h2>Our Mission</h2>
+      <p>At VibraTube, our mission is to empower creators and foster meaningful connections through innovative visual storytelling. We strive to provide a platform where creativity knows no bounds, and where every user can find their unique voice and audience.</p>
+      
+      <h2>Meet the Team</h2>
+      <div class="team-grid">
+        <div class="team-member fade-in">
+          <img src="https://vibratube.com/images/team/sarah-chen.jpg" alt="Sarah Chen" width="150" height="150">
+          <h3>Caleb Minah</h3>
+          <p>Co-founder & CEO</p>
+        </div>
+        <div class="team-member fade-in">
+          <img src="https://vibratube.com/images/team/michael-rodriguez.jpg" alt="Michael Rodriguez" width="150" height="150">
+          <h3>Blessed Sesay</h3>
+          <p>Co-founder & CTO</p>
+        </div>
+        <div class="team-member fade-in">
+          <img src="https://vibratube.com/images/team/aisha-patel.jpg" alt="Aisha Patel" width="150" height="150">
+          <h3>Aurie Tibet</h3>
+          <p>Head of Product</p>
+        </div>
+        <div class="team-member fade-in">
+          <img src="https://vibratube.com/images/team/alex-kim.jpg" alt="Alex Kim" width="150" height="150">
+          <h3>Alex Kim</h3>
+          <p>Lead Designer</p>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      <p>&copy; 2023 VibraTube. All rights reserved.</p>
+      <nav>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="contact us.html">Contact Us</a>
+      </nav>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationDelay = `${entry.target.dataset.delay || 0}s`;
+            entry.target.style.animationPlayState = 'running';
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+      
+      fadeElements.forEach((el, index) => {
+        el.dataset.delay = index * 0.2;
+        observer.observe(el);
+      });
+    });
+  </script>
+</body></html>

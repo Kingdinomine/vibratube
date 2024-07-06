@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VibraTube - Create Your Channel</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+  }
+  .logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff0000, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000; }
+    to { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+  }
+  nav a {
+    color: #00ffff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #ff00ff;
+  }
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .create-form {
+    background-color: rgba(0, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="url"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 5px;
+  }
+  input[type="file"] {
+    display: none;
+  }
+  .file-upload-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00ffff;
+    color: #000;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .file-upload-label:hover {
+    background-color: #00cccc;
+  }
+  .color-picker {
+    display: flex;
+    gap: 10px;
+  }
+  .color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .color-option:hover {
+    transform: scale(1.2);
+  }
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .submit-button:hover {
+    background-color: #cc0000;
+  }
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-top: 1px solid #333;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">VibraTube</div>
+      <nav>
+        <a href="https://vibratube.com/">Home</a>
+        <a href="https://vibratube.com/features">Features</a>
+        <a href="https://vibratube.com/explore">Explore</a>
+        <a href="https://vibratube.com/login">Login</a>
+        <a href="channels.html">Channels page</a>
+      </nav>
+    </header>
+    
+    <h1>Create Your Channel</h1>
+    
+    <form class="create-form" action="channels.html" method="POST">
+      <div class="form-group">
+        <label for="channel-name">Channel Name</label>
+        <input type="text" id="channel-name" name="channel-name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="channel-description">Channel Description</label>
+        <textarea id="channel-description" name="channel-description" rows="4" required></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="profile-picture">Profile Picture</label>
+        <input type="file" id="profile-picture" name="profile-picture" accept="image/*">
+        <label for="profile-picture" class="file-upload-label">Choose File</label>
+      </div>
+      
+      <div class="form-group">
+        <label for="channel-banner">Channel Banner</label>
+        <input type="file" id="channel-banner" name="channel-banner" accept="image/*">
+        <label for="channel-banner" class="file-upload-label">Choose File</label>
+      </div>
+      
+      <div class="form-group">
+        <label>Channel Color Scheme</label>
+        <div class="color-picker">
+          <div class="color-option" style="background-color: #ff0000;" data-color="#ff0000"></div>
+          <div class="color-option" style="background-color: #00ff00;" data-color="#00ff00"></div>
+          <div class="color-option" style="background-color: #0000ff;" data-color="#0000ff"></div>
+          <div class="color-option" style="background-color: #ffff00;" data-color="#ffff00"></div>
+          <div class="color-option" style="background-color: #ff00ff;" data-color="#ff00ff"></div>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="social-links">Social Media Links</label>
+        <input type="url" id="social-links" name="social-links" placeholder="https://twitter.com/yourusername">
+      </div>
+      
+      <button type="submit" class="submit-button">Create Channel</button>
+    </form>
+    
+    <footer>
+      <p>&copy; 2023 VibraTube. All rights reserved.</p>
+      <nav>
+        <a href="https://vibratube.com/about">About</a>
+        <a href="https://vibratube.com/privacy">Privacy</a>
+        <a href="https://vibratube.com/terms">Terms</a>
+        <a href="https://vibratube.com/contact">Contact</a>
+      </nav>
+    </footer>
+  </div>
+  
+  <script>
+    // Simple color picker functionality
+    const colorOptions = document.querySelectorAll('.color-option');
+    let selectedColor = null;
+    
+    colorOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        colorOptions.forEach(o => o.style.border = 'none');
+        option.style.border = '2px solid white';
+        selectedColor = option.dataset.color;
+      });
+    });
+    
+    // Form submission
+    document.querySelector('.create-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Here you would typically send the form data to the server
+      // For this example, we'll just show an alert
+      alert('Channel created successfully! Redirecting to your new channel...');
+      
+      // Simulate redirection to the new channel
+      setTimeout(() => {
+        window.location.href = "channels1.html";
+      }, 2000);
+    });
+  </script>
+</body></html>

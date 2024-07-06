@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VibraTube - Channels</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid #333;
+    }
+    .logo {
+      font-size: 2.5em;
+      font-weight: bold;
+      background: linear-gradient(45deg, #ff0000, #ff00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000; }
+      to { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+    }
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff00ff;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .channel-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .channel-item {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      width: calc(33.333% - 20px);
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .channel-item img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+      border-top: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">VibraTube</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="explore.html">Explore</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+    
+    <h1>Channels</h1>
+    
+    <div class="channel-list" id="channel-list"></div>
+    
+    <footer>
+      <p>&copy; 2023 VibraTube. All rights reserved.</p>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </footer>
+  </div>
+  
+  <script>
+    // Fetch channels and display them
+    fetch('http://localhost:5000/api/channels')
+      .then(response => response.json())
+      .then(channels => {
+        const channelList = document.getElementById('channel-list');
+        channels.forEach(channel => {
+          const channelItem = document.createElement('div');
+          channelItem.className = 'channel-item';
+          channelItem.innerHTML = `
+            <img src="${channel.profilePicture ? channel.profilePicture : 'default-profile.png'}" alt="Profile Picture">
+            <h3>${channel.name}</h3>
+            <p>${channel.description}</p>
+          `;
+          channelList.appendChild(channelItem);
+        });
+      })
+      .catch(err => console.error(err));
+  </script>
+</body>
+</html>

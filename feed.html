@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+<title>VibraTube - Smart Feed Feature</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+  }
+  .logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff0000, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000; }
+    to { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+  }
+  nav a {
+    color: #00ffff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #ff00ff;
+  }
+  h1, h2 {
+    color: #00ffff;
+  }
+  .feature-showcase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .feature-description {
+    flex: 1;
+    padding-right: 50px;
+  }
+  .feature-visual {
+    flex: 1;
+    background: rgba(0, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  }
+  .feed-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  .feed-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 15px;
+  }
+  .feed-content {
+    flex: 1;
+  }
+  .feed-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .feed-action {
+    color: #00ffff;
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+  .cta-button {
+    display: inline-block;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+  }
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-top: 1px solid #333;
+  }
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">VibraTube</div>
+      <nav>
+        <a href="feature.html">Features</a>
+        <a href="explore.html">Explore</a>
+        <a href="create.html">Create</a>
+        <a href="#live">Go Live</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+    
+    <h1>Smart Feed: Your Personalized Content Stream</h1>
+    
+    <div class="feature-showcase">
+      <div class="feature-description">
+        <h2>Discover Content You'll Love</h2>
+        <p>VibraTube's Smart Feed uses advanced AI algorithms to curate a personalized content stream just for you. Our system learns from your interactions, preferences, and viewing habits to deliver a mix of content that keeps you engaged and entertained.</p>
+        <h3>Key Benefits:</h3>
+        <ul>
+          <li>Personalized content recommendations</li>
+          <li>Discover new creators aligned with your interests</li>
+          <li>Stay up-to-date with trending topics in your niche</li>
+          <li>Seamless integration of photos, videos, and live streams</li>
+          <li>Smart categorization for easy navigation</li>
+        </ul>
+        <a href="https://vibratube.com/signup" class="cta-button">Experience Smart Feed</a>
+      </div>
+      <div class="feature-visual floating">
+        <div class="feed-item">
+          <img alt="Profile picture of a young woman with curly hair" src="user1.jpg" width="50" height="50">
+          <div class="feed-content">
+            <strong>@TravelEnthusiast</strong>
+            <p>Just landed in Bali! Can't wait to explore the beaches and temples. 🏝️🛕 #BaliAdventure</p>
+            <div class="feed-actions">
+              <a href="#" class="feed-action">❤️ Like</a>
+              <a href="#" class="feed-action">💬 Comment</a>
+              <a href="#" class="feed-action">🔁 Share</a>
+            </div>
+          </div>
+        </div>
+        <div class="feed-item">
+          <img alt="Profile picture of a chef in a white hat" src="user2.jpg" width="50" height="50">
+          <div class="feed-content">
+            <strong>@MasterChef</strong>
+            <p>New recipe alert! 🍳 Check out my latest video on how to make the perfect eggs benedict. #CookingTips</p>
+            <div class="feed-actions">
+              <a href="#" class="feed-action">❤️ Like</a>
+              <a href="#" class="feed-action">💬 Comment</a>
+              <a href="#" class="feed-action">🔁 Share</a>
+            </div>
+          </div>
+        </div>
+        <div class="feed-item">
+          <img alt="Profile picture of a fitness instructor" src="user3.jpg" width="50" height="50">
+          <div class="feed-content">
+            <strong>@FitnessFanatic</strong>
+            <p>Going live in 10 minutes with a high-intensity workout! Join me for some calorie-burning fun! 💪🔥 #FitnessLive</p>
+            <div class="feed-actions">
+              <a href="#" class="feed-action">🔔 Notify Me</a>
+              <a href="#" class="feed-action">👍 Interested</a>
+              <a href="#" class="feed-action">🔁 Share</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <p>&copy; 2023 VibraTube. All rights reserved.</p>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact us.html">Contact</a>
+      </nav>
+    </footer>
+  </div>
+</body></html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VibraTube Explore - Discover a World of Creativity</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+  }
+  .logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff0000, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000; }
+    to { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+  }
+  nav a {
+    color: #00ffff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #ff00ff;
+  }
+  h1, h2 {
+    color: #00ffff;
+  }
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .explore-item {
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .explore-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+  }
+  .explore-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .explore-item-info {
+    padding: 15px;
+  }
+  .explore-item-info h3 {
+    margin: 0 0 10px 0;
+    color: #00ffff;
+  }
+  .explore-item-info p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #ccc;
+  }
+  .trending-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+  }
+  .tag {
+    background: rgba(255, 0, 255, 0.2);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    transition: background 0.3s ease;
+  }
+  .tag:hover {
+    background: rgba(255, 0, 255, 0.4);
+  }
+  .search-bar {
+    display: flex;
+    margin-top: 30px;
+  }
+  .search-bar input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    background: rgba(0, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 5px 0 0 5px;
+  }
+  .search-bar button {
+    padding: 10px 20px;
+    border: none;
+    background: #ff00ff;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-top: 1px solid #333;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">VibraTube</div>
+      <nav>
+        <a href="feature.html">Features</a>
+        <a href="create.html">Create</a>
+        <a href="#live">Go Live</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+    
+    <h1>Explore VibraTube</h1>
+    <p>Discover trending content, challenges, and creators from around the world.</p>
+    
+    <div class="search-bar">
+      <input type="text" placeholder="Search for creators, hashtags, or content...">
+      <button>Search</button>
+    </div>
+    
+    <h2>Trending Tags</h2>
+    <div class="trending-tags">
+      <a href="https://vibratube.com/tag/DanceChallenge" class="tag">#DanceChallenge</a>
+      <a href="https://vibratube.com/tag/TechTalk" class="tag">#TechTalk</a>
+      <a href="https://vibratube.com/tag/FoodieFriday" class="tag">#FoodieFriday</a>
+      <a href="https://vibratube.com/tag/TravelDiaries" class="tag">#TravelDiaries</a>
+      <a href="https://vibratube.com/tag/FitnessMadness" class="tag">#FitnessMadness</a>
+      <a href="https://vibratube.com/tag/ArtisticSoul" class="tag">#ArtisticSoul</a>
+    </div>
+    
+    <h2>Trending Content</h2>
+    <div class="explore-grid">
+      <div class="explore-item">
+        <img src="dance_challenge.jpg" alt="Vibrant group dance challenge video thumbnail" width="250" height="200">
+        <div class="explore-item-info">
+          <h3>Epic Dance Battle</h3>
+          <p>@DanceKing123 • 2.5M views</p>
+        </div>
+      </div>
+      <div class="explore-item">
+        <img src="tech_review.jpg" alt="Latest smartphone review video thumbnail" width="250" height="200">
+        <div class="explore-item-info">
+          <h3>New Tech Review</h3>
+          <p>@TechGuru • 1.8M views</p>
+        </div>
+      </div>
+      <div class="explore-item">
+        <img src="cooking_stream.jpg" alt="Live cooking show thumbnail" width="250" height="200">
+        <div class="explore-item-info">
+          <h3>Gourmet Cooking Live</h3>
+          <p>@ChefMaster • 500K watching</p>
+        </div>
+      </div>
+      <div class="explore-item">
+        <img src="travel_vlog.jpg" alt="Scenic travel vlog thumbnail" width="250" height="200">
+        <div class="explore-item-info">
+          <h3>Hidden Gems of Bali</h3>
+          <p>@Wanderlust • 3.2M views</p>
+        </div>
+      </div>
+      <div class="explore-item">
+        <img src="fitness_challenge.jpg" alt="Intense fitness challenge video thumbnail" width="250" height="200">
+        <div class="explore-item-info">
+          <h3>30-Day Transformation</h3>
+          <p>@FitnessFanatic • 4.7M views</p>
+        </div>
+      </div>
+      <div class="explore-item">
+        <img src="art_timelapse.jpg" alt="Artistic timelapse video thumbnail" width="250" height="200">
+        <div class="explore-item-info">
+          <h3>Masterpiece in Minutes</h3>
+          <p>@ArtistExtraordinaire • 1.1M views</p>
+        </div>
+      </div>
+    </div>
+    
+    <h2>Trending Creators</h2>
+    <div class="explore-grid">
+      <div class="explore-item">
+        <img src="creator_dancequeen.jpg" alt="Profile picture of DanceQueen" width="250" height="200">
+        <div class="explore-item-info">
+          <h3>@DanceQueen</h3>
+          <p>10M followers • Dance</p>
+        </div>
+      </div>
+      <div class="explore-item">
+        <img src="creator_techwhiz.jpg" alt="Profile picture of TechWhiz" width="250" height="200">
+        <div class="explore-item-info">
+          <h3>@TechWhiz</h3>
+          <p>5.2M followers • Technology</p>
+        </div>
+      </div>
+      <div class="explore-item">
+        <img src="creator_foodiegalore.jpg" alt="Profile picture of FoodieGalore" width="250" height="200">
+        <div class="explore-item-info">
+          <h3>@FoodieGalore</h3>
+          <p>7.8M followers • Cooking</p>
+        </div>
+      </div>
+      <div class="explore-item">
+        <img src="creator_globetrotter.jpg" alt="Profile picture of GlobeTrotter" width="250" height="200">
+        <div class="explore-item-info">
+          <h3>@GlobeTrotter</h3>
+          <p>6.5M followers • Travel</p>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <p>&copy; 2023 VibraTube. All rights reserved.</p>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact us.html">Contact</a>
+      </nav>
+    </footer>
+  </div>
+</body></html>
